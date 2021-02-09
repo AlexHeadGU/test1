@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+
+  maven:
+    build: maven-custom
+    ports:
+      - "5000:5000"
+      container_name: maven
+      volumes:
+        - ./logs/:/usr/local/tomcat/logs/
+
+
+  tomcat:
+    image: tomcat:alpine
+    depends_on:
+      - maven
+    volumes:
+      - ./target/LoginWebApp-1.war:/usr/local/tomcat/webapps/LoginWebApp-1.war
+    ports:
+      - "8080:8080"
+      container_name: tomcat
+      volumes:
+        - ./logs/:/usr/local/tomcat/logs/
