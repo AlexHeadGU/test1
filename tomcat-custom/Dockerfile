@@ -1,5 +1,5 @@
 #build
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 MAINTAINER headgus <alex-davydov211@mail.ru>
 RUN apt-get update
 RUN apt-get install tomcat9 -y
