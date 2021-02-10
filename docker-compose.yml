@@ -4,16 +4,17 @@ services:
   maven:
     build: maven-custom
     container_name: maven
+    volumes:
+      - maven_value:/home/test1/maven/boxfuse-sample-java-war-hello
 
   tomcat:
     build: tomcat-custom
     depends_on:
       - maven
-    volumes:
-      - maven:/home/test1
     ports:
       - "8080:8080"
     container_name: tomcat
 
-
+  volumes:
+    maven_value:/home/test1/maven/boxfuse-sample-java-war-hello/
 
