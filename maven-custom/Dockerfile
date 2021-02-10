@@ -2,6 +2,7 @@
 FROM maven
 MAINTAINER headgus <alex-davydov211@mail.ru>
 # Install modules
+CMD ["bash"]
 RUN apt-get update
 RUN apt-get install -y \
 		default-jdk \
