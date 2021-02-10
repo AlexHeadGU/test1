@@ -3,7 +3,7 @@ services:
 
   maven:
     build: maven-custom
-      container_name: maven
+    container_name: maven
 
   tomcat:
     build: tomcat-custom
@@ -13,4 +13,4 @@ services:
       - maven:/home/test1/maven/boxfuse-sample-java-war-hello/
     ports:
       - "8080:8080"
-      container_name: tomcat
+    container_name: tomcat
