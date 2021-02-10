@@ -3,10 +3,9 @@ FROM ubuntu:20.04
 MAINTAINER headgus <alex-davydov211@mail.ru>
 # Install modules
 RUN apt update
-RUN apt install -y \
-		default-jdk \
-		maven \
-		git \
+RUN apt install -y default-jdk
+RUN apt install -y maven
+RUN apt install -y git
 
 
 WORKDIR /home/maven/
