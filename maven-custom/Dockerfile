@@ -2,8 +2,8 @@
 FROM maven
 MAINTAINER headgus <alex-davydov211@mail.ru>
 # Install modules
-RUN apk update
-RUN apk install -y \
+RUN apt-get update
+RUN apt-get install -y \
 		default-jdk \
 		maven \
 		git \
