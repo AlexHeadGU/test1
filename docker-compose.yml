@@ -6,6 +6,7 @@ services:
     container_name: maven
     volumes:
       - maven_value:/home/maven/boxfuse-sample-java-war-hello
+    tty: true
 
   #tomcat:
    # build: tomcat-custom
