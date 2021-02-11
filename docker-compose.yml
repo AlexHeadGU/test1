@@ -18,5 +18,5 @@ services:
       - maven_value:
 
 volumes:
-    maven_value
+    maven_value:
 
