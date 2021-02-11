@@ -8,6 +8,6 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 WORKDIR /home/maven/boxfuse-sample-java-war-hello
 #ADD ./target/hello-1.0.war /var/lib/tomcat9/webapps/hello-1.0.war
 RUN pwd
-RUN service tomcat9 restart
+#RUN service tomcat9 restart
 WORKDIR $CATALINA_HOME
 CMD ["catalina.sh","run"]
