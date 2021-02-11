@@ -5,7 +5,7 @@ services:
     build: maven-custom
     container_name: maven
     volumes:
-      - maven_value:/home/test1/maven/boxfuse-sample-java-war-hello
+      - maven_value:/home/maven/boxfuse-sample-java-war-hello
 
   tomcat:
     build: tomcat-custom
@@ -15,9 +15,6 @@ services:
       - "8080:8080"
     container_name: tomcat
     volumes:
-      - type: bind
-        source: /home/maven/boxfuse-sample-java-war-hello/hello-1.0.war
-        target: /var/lib/tomcat9/webapps/hello-1.0.war
       - maven_value:/home/maven/boxfuse-sample-java-war-hello/
 
 volumes:
