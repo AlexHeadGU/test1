@@ -5,7 +5,7 @@ RUN apt-get update
 RUN apt-get install tomcat9 -y
 ENV CATALINA_HOME=/usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
-ADD maven_value:/home/maven/boxfuse-sample-java-war-hello /var/lib/tomcat9/webapps
+ADD maven_value:/home/maven/boxfuse-sample-java-war-hello/hello-1.0.war /var/lib/tomcat9/webapps/
 
 RUN service restart tomcat9
 WORKDIR $CATALINA_HOME
