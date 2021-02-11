@@ -10,4 +10,4 @@ WORKDIR /home/maven/boxfuse-sample-java-war-hello
 RUN pwd
 #RUN service tomcat9 restart
 WORKDIR $CATALINA_HOME
-CMD ["catalina.sh","run"]
+CMD ["/usr/local/tomcat/bin/catalina.sh" ,"run"]
