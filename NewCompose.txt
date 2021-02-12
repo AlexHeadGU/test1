@@ -1,9 +1,0 @@
-  tomcat:
-    build: tomcat-custom
-    depends_on:
-      - maven
-    volumes:
-      - maven:/home/test1/maven/boxfuse-sample-java-war-hello/
-    ports:
-      - "8080:8080"
-    container_name: tomcat

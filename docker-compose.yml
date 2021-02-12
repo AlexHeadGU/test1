@@ -1,12 +1,11 @@
-version: '3.8'
+version: '3'
 services:
 
   maven:
     build: maven-custom
     container_name: maven
     volumes:
-      - maven_value:/home/maven/boxfuse-sample-java-war-hello
-    tty: true
+      - maven_value:/home/maven/boxfuse-sample-java-war-hello/target
 
   tomcat:
     build: tomcat-custom
@@ -16,8 +15,7 @@ services:
       - "8080:8080"
     container_name: tomcat
     volumes:
-      - maven_value:/home/maven/boxfuse-sample-java-war-hello
-    tty: true
+      - maven_value:/usr/share/tomcat9/webapps
 
 volumes:
     maven_value:
